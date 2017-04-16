@@ -1,0 +1,17 @@
+<form class="ui form" ng-submit="ctrl.saveContact()">
+    <div class="field">
+        <div class="ui input">
+            <input type="text" placeholder="Name" ng-model="ctrl.formData.name">
+        </div>
+    </div>
+    <div class="field">
+        <div class="ui input">
+            <input type="text" placeholder="Phone" ng-model="ctrl.formData.phone">
+        </div>
+    </div>
+    <button class="ui button"
+        ng-class="{disabled: ctrl.requestInProgress}"
+        ng-disabled="ctrl.requestInProgress">
+        Save
+    </button>
+</form>

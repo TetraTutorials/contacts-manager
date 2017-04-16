@@ -1,0 +1,21 @@
+<table class="ui teal fixed striped table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-if="ctrl.contacts.length === 0">
+            <td>No contacts.</td>
+        </tr>
+        <tr ng-repeat="x in ctrl.contacts track by x.id">
+            <td ng-bind="x.name"></td>
+            <td ng-bind="x.phone"></td>
+            <td>
+                <a ng-click="ctrl.deleteContact(x)"><i class="delete icon"></i></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
